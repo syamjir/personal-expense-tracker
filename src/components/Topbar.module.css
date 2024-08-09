@@ -1,0 +1,26 @@
+.topbar {
+  height: 15%;
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  font-size: 2rem;
+}
+.user img {
+  background: var(--primary-color);
+  filter: grayscale(1) brightness(2);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.user__login {
+  cursor: pointer;
+}
