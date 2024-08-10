@@ -1,0 +1,103 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #027696; /* dark blue */
+  --primary-shade: #cce4ea;
+  --primary-tint: #026a87;
+  --color-red: #dc143c;
+  --color-green: #228b22;
+  --color-yellow: #fbc02d;
+  --color-yellow-light: #f6de0433;
+
+  /* Text Colors */
+  --text-color: #555; /* dark gray for primary text */
+  --text-color-dark: #333;
+
+  /* Background Colors */
+  --primary-background-color: #eef2f7;
+  --background-color: #fff;
+
+  /* Box-shadow */
+  --primary-boxshadow: 0 0 0.8rem 0 rgba(18, 18, 18, 0.53);
+  --secondary-boxshadow: 0 0 0.2rem 0 rgba(18, 18, 18, 0.53);
+
+  /* Border-radius */
+  --primary-border-radius: 1.2rem;
+  --secondary-border-radius: 0.8rem;
+}
+
+/* Reset default settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Set base font size for easier rem calculations and base styling for the body */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--text-color);
+}
+/* Styling form */
+.form__modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.form,
+.form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.form__container {
+  box-shadow: var(--primary-boxshadow);
+  padding: 2.4rem;
+  background-color: var(--primary-background-color);
+  border-radius: var(--primary-border-radius);
+}
+.form__input--group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.form input {
+  outline: none;
+  border: none;
+  padding: 1.5rem;
+  width: 44rem;
+  border-radius: var(--secondary-border-radius);
+  font-size: 1.8rem;
+  border-bottom: 4px solid var(--primary-color);
+}
+.form__label {
+  font-size: 1.8rem;
+}
+.form__container h4 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  margin-top: -0.2rem;
+}
+.form button {
+  width: 100%;
+  border: none;
+  border-radius: var(--secondary-border-radius);
+  padding: 1.3rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--background-color);
+  margin-top: 1rem;
+}
