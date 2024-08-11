@@ -3,10 +3,10 @@
   --primary-color: #027696; /* dark blue */
   --primary-shade: #cce4ea;
   --primary-tint: #026a87;
-  --color-red: #dc143c;
-  --color-green: #228b22;
-  --color-yellow: #fbc02d;
-  --color-yellow-light: #f6de0433;
+  --color-red: #d32f2f;
+  --color-green: #388e3c;
+  --color-yellow: #ff9800;
+  --color-yellow-light: #ffe0b2;
 
   /* Text Colors */
   --text-color: #555; /* dark gray for primary text */
@@ -100,4 +100,29 @@ body {
   font-size: 1.8rem;
   color: var(--background-color);
   margin-top: 1rem;
+}
+/* Button */
+.cta__btn:hover {
+  color: var(--primary-color);
+}
+.edit-button,
+.delete-button {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--secondary-border-radius);
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.delete-button {
+  background-color: var(--color-red);
+}
+.transaction__box {
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--primary-border-radius);
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
 }
