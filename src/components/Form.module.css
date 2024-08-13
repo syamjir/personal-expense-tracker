@@ -1,0 +1,21 @@
+/* red */
+.form__btn--red {
+  background-color: var(--color-red);
+}
+.form__title--red {
+  color: var(--color-red);
+}
+.form__input--red {
+  border-bottom: 4px solid var(--color-red);
+}
+
+/* green */
+.form__btn--green {
+  background-color: var(--color-green);
+}
+.form__title--green {
+  color: var(--color-green);
+}
+.form__input--green {
+  border-bottom: 4px solid var(--color-green);
+}
