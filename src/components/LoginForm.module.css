@@ -1,0 +1,7 @@
+.form__btn--blue {
+  background-color: var(--primary-color);
+}
+
+.form__title--blue {
+  color: var(--primary-color);
+}
