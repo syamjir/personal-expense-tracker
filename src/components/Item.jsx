@@ -22,6 +22,7 @@ function Item({
         <FaEdit
           className={styles.edit__icon}
           onClick={() => onEditTransaction(id)}
+          aria-label="Edit transaction"
         />
       </div>
       <div className={styles.container}>
@@ -41,6 +42,7 @@ function Item({
         <FaTrash
           className={styles.delete__icon}
           onClick={() => onHandleDelete(id)}
+          aria-label="Delete transaction"
         />
       </div>
     </div>
