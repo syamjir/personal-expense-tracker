@@ -1,0 +1,32 @@
+/* item */
+.item {
+  font-size: 1.6rem;
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--secondary-border-radius);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+}
+.item__details-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+:global(.dot) {
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-red);
+  border-radius: 50%;
+}
+.edit__icon:hover,
+.delete__icon:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.delete__icon:hover {
+  color: var(--color-red);
+}
