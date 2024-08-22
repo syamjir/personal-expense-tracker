@@ -1,0 +1,52 @@
+/* transaction card */
+.card {
+  display: grid;
+  grid-template-columns: 2fr 4fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--primary-boxshadow);
+  font-size: 1.8rem;
+  border-radius: var(--primary-border-radius);
+  padding: 1rem 0;
+  width: 35rem;
+}
+.card h4,
+.card__name {
+  justify-self: start;
+}
+.card__icon,
+.card__cash {
+  grid-row: 1 / -1;
+}
+.card__cash {
+  grid-column: 3 / -1;
+  font-size: 2rem;
+  justify-self: start;
+  font-weight: 500;
+}
+.card__icon--outline {
+  box-shadow: var(--secondary-boxshadow);
+}
+.card__icon {
+  font-size: 6rem;
+  color: var(--color-yellow);
+  box-shadow: var(--secondary-boxshadow);
+  border-radius: var(--primary-border-radius);
+  background: var(--color-yellow-light);
+  padding: 0.2rem;
+}
+.card__name {
+  color: #777;
+  font-size: 1.6rem;
+}
+
+.card__cash--red {
+  color: var(--color-red);
+}
+.card__cash--green {
+  color: var(--color-green);
+}
+.card__cash--blue {
+  color: var(--primary-color);
+}
