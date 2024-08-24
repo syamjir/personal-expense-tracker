@@ -1,0 +1,35 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+  gap: 2rem;
+}
+.dashboard__transactions {
+  justify-self: center;
+}
+.dashboard p {
+  line-height: 1.6;
+}
+.chart__overview {
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--primary-border-radius);
+}
+.chart__outline_dashed,
+.transaction__box_outline {
+  border: 3px dashed var(--primary-color);
+  border-radius: var(--primary-border-radius);
+  padding: 0.7rem;
+}
+.chart__title {
+  font-size: 2rem;
+  margin-top: -2rem;
+  padding: 2rem;
+}
+
+/* transaction box */
+
+.section__title {
+  margin-top: 2rem;
+}
