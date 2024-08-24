@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "./Chart";
-import "./dashboard.css";
+import styles from "./Dashboard.module.css";
 import TransactionCard from "./TransactionCard";
 import TopExpense from "./TopExpense";
 
@@ -24,11 +24,11 @@ function Dashboard({ transactions }) {
     : 0;
 
   return (
-    <div className="dashboard">
+    <div className={styles.dashboard}>
       <div>
-        <h4 className="chart__title">Overview</h4>
-        <div className="chart__outline--dashed">
-          <div className="chart__overview">
+        <h4 className={styles.chart__title}>Overview</h4>
+        <div className={styles.chart__outline_dashed}>
+          <div className={styles.chart__overview}>
             <Chart
               creditAmount={creditAmount}
               debitAmount={debitAmount}
@@ -37,16 +37,18 @@ function Dashboard({ transactions }) {
           </div>
         </div>
       </div>
-      <div className="dashboard__transactions">
-        <h4 className="chart__title ">Top Expense</h4>
-        <div className="chart__outline--dashed">
-          <div className="chart__overview">
+      <div className={styles.dashboard__transactions}>
+        <h4 className={styles.chart__title}>Top Expense</h4>
+        <div className={styles.chart__outline_dashed}>
+          <div className={styles.chart__overview}>
             <TopExpense highestDebit={highestDebit} />
           </div>
         </div>
-        <h4 className="chart__title section__title">Transaction Card</h4>
-        <div className="chart__outline--dashed">
-          <div className="chart__overview">
+        <h4 className={`${styles.chart__title} ${styles.section__title}`}>
+          Transaction Card
+        </h4>
+        <div className={styles.chart__outline_dashed}>
+          <div className={styles.chart__overview}>
             <TransactionCard
               creditAmount={creditAmount}
               debitAmount={debitAmount}
