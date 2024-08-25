@@ -1,7 +1,12 @@
 import React from "react";
 import TransactionPage from "../TransactionPage";
 
-function Expense({ transactions, onSetTransactions, onHandleDelete }) {
+function Expense({
+  transactions,
+  onSetTransactions,
+  onHandleDelete,
+  balanceAmount,
+}) {
   const expenseLogs = transactions
     ? transactions.filter((transaction) => transaction.type === "Debit")
     : [];
@@ -17,6 +22,7 @@ function Expense({ transactions, onSetTransactions, onHandleDelete }) {
       transactions={expenseLogs}
       onSetTransactions={onSetTransactions}
       onHandleDelete={onHandleDelete}
+      balanceAmount={balanceAmount}
     />
   );
 }

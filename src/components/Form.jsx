@@ -7,6 +7,7 @@ function Form({
   onIsModalOpen,
   onSetTransactions,
   editTransaction,
+  balanceAmount,
 }) {
   const [transactionName, setTransactionName] = useState("");
   const [amount, setAmount] = useState("");
@@ -23,6 +24,12 @@ function Form({
   useCloseForm(onIsModalOpen);
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (type === "Debit") {
+      if (amount > balanceAmount) {
+        return alert("you haven't enough balance 😕!");
+      }
+    }
+
     onIsModalOpen(false);
 
     onSetTransactions((transactions) => {
