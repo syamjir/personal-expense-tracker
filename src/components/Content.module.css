@@ -1,0 +1,6 @@
+.content {
+  height: 100%;
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--background-color);
+}
