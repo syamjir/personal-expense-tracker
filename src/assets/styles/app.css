@@ -1,0 +1,30 @@
+.app-container {
+  display: grid;
+  grid-template-columns: 2.5fr 7.5fr;
+  column-gap: 2rem;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  background-color: var(--primary-background-color);
+}
+.app-container__main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.content {
+  height: 100%;
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--background-color);
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--primary-color);
+  font-size: 2rem;
+}

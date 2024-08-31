@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./assets/styles/App.css";
+import "./assets/styles/app.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/header/Topbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
