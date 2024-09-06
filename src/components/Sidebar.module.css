@@ -1,0 +1,75 @@
+.sidebar {
+  height: 100%;
+  box-shadow: var(--primary-boxshadow);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--background-color);
+}
+
+.sidebar__header {
+  padding: 3rem;
+  text-align: center;
+}
+
+.sidebar__header h1 {
+  font-size: 5.2rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 0.8rem #15424e28;
+}
+.sidebar__header h2 {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.sidebar__menu {
+  padding: 4.8rem;
+}
+
+.sidebar__menu ul {
+  list-style: none;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1.2rem;
+  padding: 1.6rem 1.6rem;
+  transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.sidebar__item:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(204, 228, 234, 1) 100%
+  );
+  color: var(--text-color-dark);
+  border-radius: var(--secondary-border-radius);
+  border-left: 0;
+}
+
+.sidebar__item:hover .sidebar__icon {
+  color: var(--primary-color);
+}
+
+/* React router class */
+.active {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(204, 228, 234, 1) 100%
+  );
+  color: var(--text-color-dark);
+  border-radius: var(--secondary-border-radius);
+  border-left: 0;
+}
+.active .sidebar__icon {
+  color: var(--primary-color);
+}
