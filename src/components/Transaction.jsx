@@ -79,7 +79,7 @@ function Transaction({ transactions }) {
         </div>
         <div className="transaction__details-scroll">
           {filteredTransactions.map((transaction) => (
-            <div className="transaction__details">
+            <div className="transaction__details" key={transaction.id}>
               <p>{transaction.transactionName}</p>
               <div className="money__inout">
                 <p

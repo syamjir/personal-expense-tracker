@@ -1,5 +1,5 @@
 import React from "react";
-import TransactionPage from "../TransactionPage";
+import TransactionPage from "./TransactionPage";
 
 function Income({ transactions, onSetTransactions, onHandleDelete }) {
   const incomeLogs = transactions

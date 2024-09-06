@@ -3,7 +3,11 @@ import styles from "./Topbar.module.css";
 import { FaUser } from "react-icons/fa";
 import LoginForm from "./LoginForm";
 
-function Topbar({ loginDetail, onSetloginDetail, userIcon }) {
+function Topbar({
+  loginDetail,
+  onSetloginDetail,
+  userIcon = "./Sample_User_Icon.png",
+}) {
   const [isOpenloginForm, setIsOpenLoginForm] = useState(false);
 
   return (
@@ -31,9 +35,5 @@ function Topbar({ loginDetail, onSetloginDetail, userIcon }) {
     </div>
   );
 }
-
-Topbar.defaultProps = {
-  userIcon: "./Sample_User_Icon.png",
-};
 
 export default Topbar;

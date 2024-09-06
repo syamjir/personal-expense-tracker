@@ -8,7 +8,7 @@ import Expense from "./components/Expense";
 import Income from "./components/Income";
 import Transaction from "./components/Transaction";
 import NotFound from "./components/NotFound";
-import { useLocalStorage } from "./customHooks/useLocalStorage";
+import { useLocalStorage } from "./hooks/useSavedToLocalStorage.jsx";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -23,15 +23,6 @@ function App() {
 
   useLocalStorage(transactions, "transactions");
   useLocalStorage(loginDetail, "userDetails");
-
-  const handleDelete = (deleteId) => {
-    console.log("Deleting transaction with id:", deleteId);
-    const updatedTransactions = transactions.filter(
-      (transaction) => transaction.id !== deleteId
-    );
-    console.log(updatedTransactions);
-    setTransactions(updatedTransactions);
-  };
 
   const creditAmount = transactions
     ? transactions
@@ -50,6 +41,36 @@ function App() {
         .filter((transaction) => transaction.type === "Debit")
         .sort((a, b) => b.amount - a.amount)[0]
     : 0;
+
+  const handleDelete = (deleteId) => {
+    console.log("Deleting transaction with id:", deleteId);
+
+    // Filter out the deleted transaction
+    const updatedTransactions = transactions.filter(
+      (transaction) => transaction.id !== deleteId
+    );
+
+    // Check if there is any transaction with type "Credit" and "Debit"
+    const hasCreditTransaction = updatedTransactions.some(
+      (transaction) => transaction.type === "Credit"
+    );
+    const hasDebitTransaction = updatedTransactions.some(
+      (transaction) => transaction.type === "Debit"
+    );
+
+    // If no debit transactions, just update transactions
+    if (!hasDebitTransaction) {
+      return setTransactions(updatedTransactions);
+    }
+
+    // If no credit transactions, show alert
+    if (!hasCreditTransaction) {
+      return alert("Income is always above expense");
+    }
+
+    // Otherwise, update the transactions
+    setTransactions(updatedTransactions);
+  };
 
   return (
     <BrowserRouter>

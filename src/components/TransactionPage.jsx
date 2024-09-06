@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./TransactionPage.module.css";
 import Item from "./Item";
 import LatestTransaction from "./LatestTransaction";
-import Form from "./form/Form";
+import Form from "./Form";
 
 function TransactionPage({
   type,

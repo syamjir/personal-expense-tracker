@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
-import { useCloseForm } from "../../customHooks/useCloseForm";
+import { useCloseForm } from "../hooks/useCloseForm";
 function LoginForm({ onSetloginDetail, onSetIsOpenLoginForm }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

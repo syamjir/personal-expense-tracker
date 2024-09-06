@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Form.module.css";
-import { useCloseForm } from "../../../customHooks/useCloseForm";
+import { useCloseForm } from "../hooks/useCloseForm";
 function Form({
   color,
   type,
