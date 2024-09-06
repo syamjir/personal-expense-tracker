@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./assets/styles/app.css";
-import Sidebar from "./components/sidebar/Sidebar";
-import Topbar from "./components/header/Topbar";
+
+import Topbar from "./components/Topbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./components/pages/dashboard/Dashboard";
-import Expense from "./components/pages/expense/Expense";
-import Income from "./components/pages/income/Income";
-import Transaction from "./components/pages/transactions/Transaction";
-import NotFound from "./components/pages/notfound/NotFound";
+import Dashboard from "./components/Dashboard";
+import Expense from "./components/Expense";
+import Income from "./components/Income";
+import Transaction from "./components/Transaction";
+import NotFound from "./components/NotFound";
 import { useLocalStorage } from "./customHooks/useLocalStorage";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const [loginDetail, setloginDetail] = useState(() => {
