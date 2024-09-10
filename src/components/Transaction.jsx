@@ -50,7 +50,7 @@ function Transaction({ transactions }) {
         <div className="transaction__menu">
           <div className="transaction__currency">
             <h4>Total transactions:</h4>
-            <p>${totalTransactions}</p>
+            <p>₹{totalTransactions}</p>
           </div>
           <div className="transaction__menu-view">
             <select
@@ -91,7 +91,7 @@ function Transaction({ transactions }) {
                 ></p>
                 <p>{transaction.type}</p>
               </div>
-              <p>${transaction.amount}</p>
+              <p>₹{transaction.amount}</p>
               <p>{transaction.date}</p>
             </div>
           ))}
